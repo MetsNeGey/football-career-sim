@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>FC 26 Career</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#0f172a] text-white font-sans select-none overflow-hidden">
+    <div id="app" class="max-w-md mx-auto h-screen flex flex-col">
+        
+        <header id="top-bar" class="p-4 bg-[#1e293b] flex justify-between items-end border-b border-slate-700 opacity-0 transition-opacity duration-500">
+            <div>
+                <p id="game-date" class="text-blue-400 text-[10px] font-bold uppercase tracking-widest">10 Августа 2026</p>
+                <h1 class="text-lg font-black" id="player-name-display">Загрузка...</h1>
+            </div>
+            <div class="text-right">
+                <span id="player-club-display" class="block text-[10px] text-slate-400 font-bold uppercase">---</span>
+                <span id="player-ovr-display" class="text-2xl font-black text-yellow-400 italic">00</span>
+            </div>
+        </header>
+
+        <main id="main-screen" class="flex-grow overflow-y-auto p-4 relative">
+            <div class="flex items-center justify-center h-full">
+                <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>
+            </div>
+        </main>
+
+        <nav id="bottom-nav" class="bg-[#1e293b]/95 backdrop-blur-md border-t border-slate-700 grid grid-cols-5 gap-1 py-2 pb-6 opacity-0 transition-opacity duration-500">
+            <button onclick="showScreen('home')" class="nav-item flex flex-col items-center text-blue-400">
+                <span class="text-xl">🏠</span><span class="text-[8px] font-bold">Главная</span>
+            </button>
+            <button onclick="showScreen('profile')" class="nav-item flex flex-col items-center text-slate-400">
+                <span class="text-xl">👤</span><span class="text-[8px] font-bold">Профиль</span>
+            </button>
+            <button onclick="showScreen('league')" class="nav-item flex flex-col items-center text-slate-400">
+                <span class="text-xl">🏆</span><span class="text-[8px] font-bold">Лига</span>
+            </button>
+            <button onclick="showScreen('calendar')" class="nav-item flex flex-col items-center text-slate-400">
+                <span class="text-xl">📅</span><span class="text-[8px] font-bold">Календарь</span>
+            </button>
+            <button onclick="showScreen('media')" class="nav-item flex flex-col items-center text-slate-400">
+                <span class="text-xl">📰</span><span class="text-[8px] font-bold">СМИ</span>
+            </button>
+        </nav>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
