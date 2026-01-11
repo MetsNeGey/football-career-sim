@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>FC 26: Path to Legend</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body class="bg-[#0b0f1a] text-white font-sans select-none overflow-hidden text-[13px]">
+    <div id="app" class="max-w-md mx-auto h-screen flex flex-col shadow-2xl bg-slate-900 border-x border-white/5">
+        
+        <header id="top-bar" class="p-4 pt-8 bg-slate-900/50 backdrop-blur-md flex justify-between items-end border-b border-white/5 opacity-0 transition-all duration-700">
+            <div>
+                <p id="game-date" class="text-blue-500 text-[10px] font-black uppercase tracking-tighter">---</p>
+                <h1 class="text-xl font-black italic tracking-tight uppercase" id="player-name-display">---</h1>
+                <div class="flex gap-2 items-center mt-1">
+                    <span id="player-money-display" class="text-green-400 font-bold text-[11px]">€0</span>
+                </div>
+            </div>
+            <div class="text-right">
+                <span id="player-club-display" class="block text-[10px] text-slate-500 font-black uppercase italic">---</span>
+                <span id="player-ovr-display" class="text-4xl font-black text-yellow-500 italic leading-none drop-shadow-lg">00</span>
+            </div>
+        </header>
+
+        <main id="main-screen" class="flex-grow overflow-y-auto p-4 custom-scroll">
+            <div class="flex items-center justify-center h-full">
+                <div class="animate-pulse text-blue-500 font-black italic uppercase">Загрузка карьеры...</div>
+            </div>
+        </main>
+
+        <nav id="bottom-nav" class="bg-slate-900/90 backdrop-blur-2xl border-t border-white/10 grid grid-cols-5 gap-1 py-4 pb-8 opacity-0 transition-all">
+            <button onclick="showScreen('home')" class="nav-btn flex flex-col items-center gap-1 text-blue-500">
+                <span class="text-xl">🏠</span><span class="text-[8px] font-black uppercase">База</span>
+            </button>
+            <button onclick="showScreen('training')" class="nav-btn flex flex-col items-center gap-1 text-slate-500">
+                <span class="text-xl">🏋️</span><span class="text-[8px] font-black uppercase">Зал</span>
+            </button>
+            <button onclick="showScreen('league')" class="nav-btn flex flex-col items-center gap-1 text-slate-500">
+                <span class="text-xl">🏆</span><span class="text-[8px] font-black uppercase">Лига</span>
+            </button>
+            <button onclick="showScreen('profile')" class="nav-btn flex flex-col items-center gap-1 text-slate-500">
+                <span class="text-xl">💰</span><span class="text-[8px] font-black uppercase">Магазин</span>
+            </button>
+            <button onclick="showScreen('media')" class="nav-btn flex flex-col items-center gap-1 text-slate-500">
+                <span class="text-xl">📰</span><span class="text-[8px] font-black uppercase">СМИ</span>
+            </button>
+        </nav>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
